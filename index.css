@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('лау.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #8b3a3a;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Geat Vibes', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    margin-left: 170px;
+    margin-top: -33px;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 600px;
+    left: 209px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgb(240, 199, 199);
+}
+
+.output {
+    position: absolute;
+    font-size: 20px;
+    color:rgb(202, 42, 42);
+    left: 180px;
+    top: 405px;
+    z-index: 100;
+    pointer-events: none;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #7e3e3e; /* Фиолетовый */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: #8c7aff; /* Светлее при наведении */
+}
+.main-btn {
+    background-color: #ff6b6b; /* Красный для главной кнопки */
+}
+.movie-btn {
+    background-color: #4ecdc4; /* Бирюзовый */
+}
+.movie-btn:hover {
+    background-color: #64d5e6;
+}
+.button-group { 
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: -90px;
+}
+
+.loading{
+    position: absolute;
+    top: 170px;
+    left: 923px;
+}
+
+.loading svg polyline {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #c93032;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.move-right {
+    margin-left: 1490px;
+    margin-top: -590px;
+    width: 290px;
+}
+
+/* Стили подарка */
+.gift {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    margin: 20px 0;
+    margin-top: 100px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+.gift.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.gift-img {
+    width: 100%;
+    border-radius: 6px;
+    height: 300px;
+    margin-left: 1635px;
+    margin-top: 100px;
+}
